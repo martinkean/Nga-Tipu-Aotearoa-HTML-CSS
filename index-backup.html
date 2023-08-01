@@ -13,7 +13,7 @@
   <!-- <link rel="stylesheet" href="style-002.css"> -->
   <link rel="stylesheet" href="style-003.css">
 
-  <title>Ng&amacr; Tipu Aotearoa - Beech species</title>
+  <title>Ng&amacr; Tipu Aotearoa</title>
 </head>
 
 <body>
@@ -21,17 +21,17 @@
 
     <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          HEADER & NAVIGATION
+          HEADER AND NAVIGATION
     
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
     <header>
       <h1>Ng&amacr; Tipu Aotearoa</h1>
       <nav class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="current-page">Home</a>
         <a href="news.html">News</a>
         <a href="contact.html">Contact</a>
-        <a href="about.html" class="current-page">About</a>
+        <a href="about.html">About</a>
       </nav>
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
@@ -40,21 +40,104 @@
 
     <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          PAGE ARTICLE
+          INTRODUCTION OR BANNER AREA
     
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-    <article class="generic__page">
-
-      <h2 class="generic__page__h2">About</h2>
-
-      <h3 class="generic__page__h3">An archive of New Zealand plants.</h3>
-
-      <p class="generic__page__intro">Beech forests are the largest remaining indigenous forest type in New Zealand,
-        mainly because beech forests are found on mountainous land not generally regarded as the best for agriculture.
+    <article class="introduction">
+      <h2>
+        Ng&amacr; Tipu Aotearoa &ndash; New Zealand Plants
+      </h2>
+      <p>
+        Ngā Tipu Aotearoa provides access to information on plant taxa that occur in New Zealand. The website combines
+        data from the Plant Names Database and the Allan Herbarium Specimen Database &ndash; providing access to
+        information on the scientific and vernacular names, synonyms, distribution and collection data, keys,
+        descriptions and images. It currently includes the data for the seed plants, mosses, ferns, liverworts,
+        hornworts, lichens and freshwater algae.
       </p>
-
+      <a href="#" class="readmore-button">
+        Continue reading &hellip;
+      </a>
     </article>
+
+    <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          GRID LAYOUT
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+    <section class="plants__grid">
+
+      <article class="plant__item">
+        <div>
+          <img src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers">
+        </div>
+        <h2 class="plant__name">K&omacr;whai</h2>
+        <p class="plant__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial
+          national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="plant__item">
+        <a href="beech-species.html" class="next-button">
+          <img src="images/black-beech-565.jpg" alt="Mountain beech flowers">
+          <h2 class="plant__name">Beech species</h2>
+          <p class="plant__desc">New Zealand has five species of beech, each prefer different soil and climate
+            conditions. . .</p>
+        </a>
+      </article>
+
+      <article class="plant__item">
+        <div>
+          <img src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers">
+        </div>
+        <h2 class="plant__name">K&omacr;whai</h2>
+        <p class="plant__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial
+          national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="plant__item">
+        <div>
+          <img src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers">
+        </div>
+        <h2 class="plant__name">K&omacr;whai</h2>
+        <p class="plant__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial
+          national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="plant__item">
+        <div>
+          <img src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers">
+        </div>
+        <h2 class="plant__name">K&omacr;whai</h2>
+        <p class="plant__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial
+          national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="plant__item">
+        <div>
+          <img src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers">
+        </div>
+        <h2 class="plant__name">K&omacr;whai</h2>
+        <p class="plant__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial
+          national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+    </section>
 
     <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -125,7 +208,7 @@
       </div>
 
       <div class="footer__site-details">
-        <p>All images in the public domain, via Wikimedia Commons.<br>Copyright Ngā Tipu Aotearoa &copy; 2023.</p>
+        <p>Copyright Ngā Tipu Aotearoa &copy; 2023.</p>
       </div>
     </footer>
 

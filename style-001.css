@@ -20,6 +20,7 @@
   (to jump to any section of the Contents, use the section number (e.g. 002) in 'Find', Cmd-F) */
 
 @import url("reset.css");
+@import url("typography.css");
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
@@ -34,20 +35,40 @@
 
 html {
   --dark-text: #13381f;
+  --light-text: #fcfcfa;
+  --cream-text: #f6ead0;
+  --medium-dark-text: #055723;
   --light-background: #f1f8f5;
+  --dark-background: #002F15;
   --card-background: #b2d8c7;
   --page-background: #edece2;
+  --dark-border-colour: #08331c;
+  --dark-green: #13632e;
   --slide-out-menu-background: rgba(233, 240, 234, 0.93);
   --footer-background: #173826;
   --off-white: #fcfcf5;
   --description-text: #8c8e8d;
+  --description-text-colour: #fcfcfa;
   --light-silver: #fcfcfa;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--typeface-poppins);
   color: #1d1d1b;
   background-color: var(--page-background);
+}
+
+/* This is the main content container for all pages */
+main {
+  max-width: 1200px;
+  background-color: var(--light-background);
+  margin: 0 auto;
+  /* The container is centred within the page */
+}
+
+.external-link {
+  text-decoration: underline;
+  color: var(--cream-text);
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -173,15 +194,9 @@ header h1 {
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-  005.  MAIN PAGE LAYOUT
+  005.  HOME PAGE LAYOUT
 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-main {
-  max-width: 1200px;
-  background-color: var(--light-background);
-  margin: 0 auto;
-}
 
 .introduction {
   background-color: var(--off-white);
@@ -203,7 +218,7 @@ main {
 }
 
 .readmore-button {
-  background-color: #13632e;
+  background-color: var(--dark-green);
   border: none;
   color: var(--off-white);
   padding: 7px 20px;
@@ -219,7 +234,7 @@ main {
 }
 
 .readmore-button:hover {
-  background-color: green;
+  background-color: var(--dark-green);
   color: var(--light-green-background);
   box-shadow: none;
 }
@@ -230,12 +245,13 @@ main {
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      006.  CARDS LAYOUT
+      006.  006.  CARDS LAYOUT - for any page that has a grid of cards
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
+/* This sets the grid layout for the page. */
 @supports (display: grid) {
-  .plants__grid {
+  .cards__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 2rem;
@@ -243,39 +259,36 @@ main {
   }
 }
 
-.plant__item {
+/* A 'card' is just a container for text and images */
+.card {
   text-align: center;
-  background-color: var(--light-green-background);
+  background-color: var(--card-background);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
   padding: 2rem 2rem 1.4rem 2rem;
   transition: box-shadow .3s;
+  text-decoration: none;
 }
 
-.plant__item:hover {
+.card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.plant__item__image {
+.card__image {
   width: 100%;
   max-width: 500px;
-  text-align: center;
-}
-
-.plant__item img {
-  width: 100%;
   aspect-ratio: 1 / 1;
 }
 
-.plant__name {
+.card__name {
   color: var(--dark-text);
   font-weight: 400;
   margin-top: .8rem;
   margin-bottom: .4rem;
 }
 
-.plant__desc {
-  color: var(--description-text);
+.card__description {
+  color: var(--dark-text);
   font-weight: 400;
   font-size: .7rem;
   margin-bottom: 1rem;
@@ -283,62 +296,45 @@ main {
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      007.  PAGE LAYOUT
+      007.  GENERIC PAGE LAYOUT
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-.page__card {
+.generic__page {
   padding: 2rem;
   margin: 0 2rem 2rem 2rem;
   min-height: 500px;
   background-color: var(--card-background);
 }
 
-.page__card h2 {
+.generic__page__h2 {
   color: var(--dark-text);
   font-weight: 400;
   font-size: 2.6em;
-  /* margin-bottom: .4rem; */
 }
 
-.page__card h3 {
+.generic__page__h3 {
   font-weight: 300;
   font-size: 2em;
-  /* margin-bottom: .4rem; */
+}
+
+.generic__page__intro {
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      008.  PLANT PAGE LAYOUT
+  008.  SINGLE ITEM  - PAGE LAYOUT
 
-    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-.plantpage__card__image {
-  grid-area: one;
-}
-
-.plantpage__card__desc__h2 {
-  grid-area: two;
-}
-
-.plantpage__card__desc__h3 {
-  grid-area: three;
-}
-
-.plantpage__card__desc__intro {
-  grid-area: four;
-}
-
-.block-one {
-  grid-area: five;
-}
-
-.block-two {
-  grid-area: six;
-}
+/*  Using 'grid-template-areas' we can design the layout of the containers 
+    For Desktop and Tablet device widths, display containers in 2 columns 
+    A full-stop '.' means 'leave a space' */
 
 @supports (display: grid) {
-  .plantpage__card {
+  .single-item {
     display: grid;
     gap: 1.5rem;
     grid-auto-columns: 1fr;
@@ -353,10 +349,16 @@ main {
   }
 }
 
-@media screen and (max-width: 54.6875em) {
-  .plantpage__card {
-    grid-template-areas:
-      'two'
+@media screen and (max-width: 1000px) {
+  .single-item__image {
+    max-width: 400px;
+  }
+}
+
+/* For mobile device widths, stack containers in a single column */
+@media screen and (max-width: 875px) {
+  .single-item {
+    grid-template-areas: 'two'
       'one'
       'three'
       'four'
@@ -366,56 +368,66 @@ main {
   }
 }
 
-.plantpage__card h2 {
+.single-item__image {
+  grid-area: one;
+  width: 100%;
+  max-width: 800px;
+}
+
+.single-item__h2 {
+  grid-area: two;
   color: var(--dark-text);
   font-weight: 400;
   font-size: 2.6em;
-  /* margin-bottom: .4rem; */
 }
 
-.plantpage__card h3 {
+.single-item__h3 {
+  grid-area: three;
   font-weight: 300;
   font-size: 2em;
-  /* margin-bottom: .4rem; */
 }
 
-.plantpage__card h4 {
-  font-weight: 500;
-  font-size: 1.3em;
-  /* margin: 2rem 0 .5rem 0; */
-}
-
-.plantpage__card b {
-  font-weight: 600;
-}
-
-.plantpage__card__desc {
+.single-item__introduction {
+  grid-area: four;
   color: var(--dark-text);
   font-weight: 400;
-  font-size: .9rem;
-  /* margin-bottom: 1rem; */
+  font-size: 1.2rem;
   max-width: 24rem;
+  margin-bottom: .5rem;
 }
 
-.plantpage__card__desc ul {
+.single-item__block-one {
+  grid-area: five;
+}
+
+.single-item__block-two {
+  grid-area: six;
+}
+
+.single-item__h4 {
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.single-item__p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.single-item__ul {
   list-style-type: none;
 }
 
-.plantpage__card__desc ul li {
+.single-item__ul li {
   padding-left: 1rem;
   background-image: url(images/list-image.svg);
   background-position: 0 .28rem;
   background-size: .7rem .7rem;
   background-repeat: no-repeat;
-  /* margin: .3rem 0; */
 }
 
-.plantpage__card__image {
-  /* margin-bottom: 1rem; */
-  width: 100%;
-  max-width: 24rem;
-}
-
+/* This button is unused at the moment : ) */
 .next-button {
   background-color: var(--dark-text);
   width: 40px;
@@ -440,12 +452,68 @@ main {
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-    009.  CONTACT FORM
+  009.  CONTACT FORM
 
-    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*  Here is the Contact Form arranged in two columns
+    A dot denotes a blank space, so the elements on those rows are left-aligned */
+@supports (display: grid) {
+  .contact-form {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      'c1 .'
+      'c2 c3'
+      'c4 c7'
+      'c5 .'
+      'c6 .'
+      'c8 .';
+    padding-block: 2rem;
+    width: min(95%, 70em);
+    margin-inline: auto;
+  }
+}
+
+/*  For mobile device widths, elements are stacked in a single column */
+@media screen and (max-width: 65.875em) {
+  .contact-form {
+    display: grid;
+    grid-template-areas:
+      'c1'
+      'c2'
+      'c3'
+      'c4'
+      'c5'
+      'c6'
+      'c7'
+      'c8';
+    margin-left: 1em;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 90vw;
+  }
+}
 
 .contact-form__heading {
   grid-area: c1;
+  color: var(--dark-text);
+  font-weight: 400;
+  font-size: 2.6em;
+}
+
+.contact-form label {
+  min-width: 100rem;
+}
+
+.contact-form h3,
+.contact-form p {
+  color: var(--cream-text);
+  font-weight: 500;
 }
 
 .contact-form__name {
@@ -476,22 +544,6 @@ main {
   grid-area: c8;
 }
 
-.contact-form {
-  display: grid;
-  gap: 1.5rem;
-  grid-auto-columns: 1fr;
-  grid-template-areas:
-    'c1 .'
-    'c2 c3'
-    'c4 c7'
-    'c5 .'
-    'c6 .'
-    'c8 .';
-  padding-block: 2rem;
-  width: min(95%, 70em);
-  margin-inline: auto;
-}
-
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -502,7 +554,7 @@ main {
   padding: 0 1.4rem;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   background-color: var(--light-silver);
-  color: green;
+  color: var(--dark-text);
 }
 
 .contact-form input,
@@ -512,7 +564,7 @@ main {
 }
 
 .contact-form__submit button {
-  background-color: #13632e;
+  background-color: var(--light-background);
   border: none;
   color: var(--off-white);
   padding: 7px 20px;
@@ -527,45 +579,13 @@ main {
 }
 
 .contact-form__submit button:hover {
-  background-color: green;
+  background-color: var(--description-text);
   color: var(--light-green-background);
   box-shadow: none;
 }
 
 .contact-form__submit button:active {
   box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
-}
-
-.contact-form__heading {
-  color: var(--dark-text);
-  font-weight: 400;
-  font-size: 2.6em;
-}
-
-.contact-form label {
-  min-width: 100rem;
-}
-
-@media screen and (max-width: 65.875em) {
-  .contact-form {
-    display: grid;
-    grid-template-areas:
-      'c1'
-      'c2'
-      'c3'
-      'c4'
-      'c5'
-      'c6'
-      'c7'
-      'c8';
-    margin-left: 1em;
-  }
-
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    width: 90vw;
-  }
 }
 
 .success-page {
@@ -616,6 +636,46 @@ ul.footer__menu__list li a {
 
 ul.footer__menu__list li a:hover {
   text-decoration: underline;
+}
+
+.footer__site-details p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1121px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .footer__menu {
+    padding: 0;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__menu {
+    padding: 0;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* = = =  E N D = = = */
