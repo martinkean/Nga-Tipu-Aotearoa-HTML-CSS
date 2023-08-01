@@ -13,8 +13,7 @@ How to use this template:
 7. Open GITGUB DESKTOP in the dock on your Mac (or download to your laptop and open)
 8. Click on the green CODE button
 9. Choose OPEN WITH GITHUB DESKTOP
-10. Choose a LOCAL PATH, in other words, the location of your files on the computer
-11. CUSTOMISE with your own typography, colours, images, and layout.
+10. Choose a LOCAL PATH, in other words, the location of your DT4-Web files on your computer
+11. CUSTOMISE *style-002.css* with your own typography, colours, images, and layout.
 
-These will be your own static HTML/CSS website template files, that you will craft into an amazing interactive experience for your audience.
 The next step after that will be to upload your files to Glitch.com.
