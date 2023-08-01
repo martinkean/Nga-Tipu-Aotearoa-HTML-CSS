@@ -235,7 +235,7 @@ header h1 {
 
 .readmore-button:hover {
   background-color: var(--dark-green);
-  color: var(--light-green-background);
+  color: var(--cream-text);
   box-shadow: none;
 }
 
@@ -512,7 +512,7 @@ header h1 {
 
 .contact-form h3,
 .contact-form p {
-  color: var(--cream-text);
+  color: var(--dark-text);
   font-weight: 500;
 }
 
@@ -564,7 +564,7 @@ header h1 {
 }
 
 .contact-form__submit button {
-  background-color: var(--light-background);
+  background-color: var(--dark-background);
   border: none;
   color: var(--off-white);
   padding: 7px 20px;
@@ -579,8 +579,8 @@ header h1 {
 }
 
 .contact-form__submit button:hover {
-  background-color: var(--description-text);
-  color: var(--light-green-background);
+  background-color: var(--dark-green);
+  color: var(--cream-text);
   box-shadow: none;
 }
 
