@@ -3,8 +3,8 @@ Nga-Tipu-Aotearoa-HTML-CSS
 
 ### HTML/CSS Template for DT4 Web
 
-How to use this template:
-1. Make sure you are signed into your Github
+Your tasks for this assignment:
+1. Make sure you are signed into your Github account
 2. Open a new tab and go to https://github.com/martinkean/Nga-Tipu-Aotearoa-HTML-CSS
 3. Click on the green 'USE THIS TEMPLATE' button
 4. Choose 'Create a new repository'
