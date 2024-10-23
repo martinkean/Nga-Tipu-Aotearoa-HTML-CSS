@@ -192,6 +192,38 @@ header h1 {
   }
 }
 
+.single-item a:hover > single-item.single-item__h3, .single-item__h2 a:hover {
+  color: red;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+  STAR NAV
+
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.star-nav {
+  background: url(images/star3.svg) no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.star-nav a {
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.star-nav a:hover {
+  text-decoration: underline;
+}
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
   005.  HOME PAGE LAYOUT
@@ -241,6 +273,36 @@ header h1 {
 
 .readmore-button:active {
   box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+      CAROUSEL
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.main-carousel {
+  width: 1200px;
+  padding: 2rem;
+}
+
+.carousel-cell {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  background-color:#edece2;
+}
+
+.carousel-cell img {
+  width: 366px;
+  height: 490px;
+}
+
+.carousel-text {
+  width: 300px;
+  padding-left: 1.6rem;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -311,6 +373,7 @@ header h1 {
   color: var(--dark-text);
   font-weight: 400;
   font-size: 2.6em;
+  margin-left: 50px;
 }
 
 .generic__page__h3 {
@@ -339,10 +402,10 @@ header h1 {
     gap: 1.5rem;
     grid-auto-columns: 1fr;
     grid-template-areas:
-      'one two'
-      'one three'
-      'four .'
-      'five six';
+      'image h2'
+      'image h3'  
+      'intro .'
+      'list1 list2';
     padding-block: 2rem;
     width: min(95%, 70em);
     margin-inline: auto;
@@ -358,37 +421,37 @@ header h1 {
 /* For mobile device widths, stack containers in a single column */
 @media screen and (max-width: 875px) {
   .single-item {
-    grid-template-areas: 'two'
-      'one'
-      'three'
-      'four'
-      'five'
-      'six';
+    grid-template-areas: 'h2'
+      'image'
+      'h3'
+      'intro'
+      'list1'
+      'list2';
     margin-left: 1em;
   }
 }
 
 .single-item__image {
-  grid-area: one;
+  grid-area: image;
   width: 100%;
   max-width: 800px;
 }
 
 .single-item__h2 {
-  grid-area: two;
+  grid-area: h2;
   color: var(--dark-text);
   font-weight: 400;
   font-size: 2.6em;
 }
 
 .single-item__h3 {
-  grid-area: three;
+  grid-area: h3;
   font-weight: 300;
   font-size: 2em;
 }
 
 .single-item__introduction {
-  grid-area: four;
+  grid-area: intro;
   color: var(--dark-text);
   font-weight: 400;
   font-size: 1.2rem;
@@ -397,11 +460,11 @@ header h1 {
 }
 
 .single-item__block-one {
-  grid-area: five;
+  grid-area: list1;
 }
 
 .single-item__block-two {
-  grid-area: six;
+  grid-area: list2;
 }
 
 .single-item__h4 {
@@ -466,7 +529,7 @@ header h1 {
     grid-template-areas:
       'c1 .'
       'c2 c3'
-      'c4 c7'
+      'c7 .'
       'c5 .'
       'c6 .'
       'c8 .';

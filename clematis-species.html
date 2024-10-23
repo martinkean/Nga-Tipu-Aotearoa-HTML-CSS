@@ -8,6 +8,9 @@
   <!-- Font Awesome - icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
   <!-- my css -->
   <link rel="stylesheet" href="style-001.css">
   <!-- <link rel="stylesheet" href="style-002.css"> -->
@@ -44,9 +47,37 @@
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "wrapAround": true }'>
+      <div class="carousel-cell"><img src="images/block2.png"><img src="images/block2.png"><p>a species
+        of flowering plant in the buttercup family Ranunculaceae. It is one of seven species of clematis native to New
+        Zealand. <em>C. paniculata</em> is the most common of these, and is widespread in forests throughout the
+        country.</p>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/block2.png">
+        <img src="images/block2.png">
+          <div class="carousel-text">
+            <h2>Subheading</h2>
+            <p>of flowering plant in the buttercup family Ranunculaceae. It is one of seven species of clematis native to New
+            Zealand. <em>C. paniculata</em> is the most common of these, and is widespread in forests throughout the
+            country.</p>
+          </div>
+      </div>
+      <div class="carousel-cell"><img src="images/block2.png"><img src="images/block2.png"><p>a species
+        of flowering plant in the buttercup family Ranunculaceae. It is one of seven species of clematis native to New
+        Zealand. <em>C. paniculata</em> is the most common of these, and is widespread in forests throughout the
+        country.</p>
+      </div>
+    </div>
+
+    <nav class="star-nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
     <article class="single-item">
-      <img src="images/Puawhananga_flowers_(Clematis_paniculata)-960px.png" alt="Toetoe" class="single-item__image">
-      <h2 class="single-item__h2">Clematis species</h2>
+      <h2 class="single-item__h2"><a class="hover-somethingelse">Clematis species</a></h2>
 
       <h3 class="single-item__h3"><em>Clematis paniculata</em> (in M&amacr;ori puaw&amacr;nanga or puapua) is a species
         of flowering plant in the buttercup family Ranunculaceae. It is one of seven species of clematis native to New
@@ -171,6 +202,9 @@
       }
     }
   </script>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </body>
 

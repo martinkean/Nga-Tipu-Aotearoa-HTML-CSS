@@ -42,7 +42,7 @@ html {
     --light-background: #1B992B;
     --dark-background: #002F15;
     --card-background: #E62322;
-    --page-background: #0b4d45;
+    --page-background: #f6ead0;
     --medium-dark-text: #055723;
     --dark-border-colour: #08331c;
     --slide-out-menu-background: #E62322;
@@ -198,6 +198,31 @@ header h1 {
     005.  HOME PAGE LAYOUT
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.desk {
+    width: 100%;
+    background-image: url(images/desk_1.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    height: 800px;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.home3 {
+    background-color:rgb(213, 177, 246);
+}
+
+.swirls {
+    position: fixed;
+    bottom: 0;
+}
+
+.swirls-text {
+    font-size: 100px;
+}
 
 .introduction {
     background-color: var(--cream-text);
